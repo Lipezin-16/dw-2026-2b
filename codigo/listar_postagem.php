@@ -54,8 +54,15 @@
             echo $texto;
             echo "<br>";
             echo $data_hora;
+            echo "<br>";
 
+            echo "<form action='salvar_curtida.php' method='post'>";
+            echo "<input type='submit' value='curtir'>" ; //botao de curtida
+            echo "</form>";
             echo "<div>";
+
+            
+
             $sql2 = "SELECT comentario.idcomentario, comentario.idusuario, comentario.texto, usuario.username, usuario.nome, usuario.foto
                 FROM comentario, usuario
                 WHERE idpostagem = $idpostagem
