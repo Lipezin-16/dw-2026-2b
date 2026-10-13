@@ -58,6 +58,8 @@
 
             echo "<form action='salvar_curtida.php' method='post'>";
             echo "<input type='hidden' name='idpostagem' value='$idpostagem'>";
+            $_SESSION["curtidas"]++;
+            $_SESSION["curtidas"]--;
             echo "<input type='image' src='descurtir.jpg' alt='Descurtir'>";
             echo "</form>";
             echo"</div>";
