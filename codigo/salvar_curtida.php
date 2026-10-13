@@ -6,7 +6,7 @@
     $idusuario = $_SESSION['idusuario'];
     $idpostagem = $_POST['idpostagem'];
 
-    $sql = "SELECT * FROM curtida WHERE idusuario = idusuario AND $idpostagem = $idpostagem;";
+    $sql = "SELECT * FROM curtida WHERE idusuario = $idusuario AND idpostagem = $idpostagem;";
     
     $resultado = mysqli_query($conexao, $sql);
 
