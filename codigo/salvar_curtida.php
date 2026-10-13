@@ -4,7 +4,7 @@
     require_once "conexao.php";
 
     $idusuario = $_SESSION['idusuario'];
-    $idpostagem = $_GET['idpostagem'];
+    $idpostagem = $_POST['idpostagem'];
     
     $sql = "INSERT INTO curtida(idusuario, idpostagem) VALUES ($idusuario, $idpostagem);";
 
