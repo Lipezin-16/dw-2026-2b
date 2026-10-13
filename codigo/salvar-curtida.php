@@ -4,9 +4,9 @@
     require_once "conexao.php";
 
     $idusuario = $_SESSION['idusuario'];
-    $idpostagem = 
+    $idpostagem = $_GET['idpostagem'];
     
-    $sql = "INSERT INTO ";
+    $sql = "INSERT INTO curtida(idusuario, idpostagem) VALUES ($idusuario, $idpostagem);";
 
     mysqli_query($conexao, $sql);
 
