@@ -10,5 +10,5 @@
 
     mysqli_query($conexao, $sql);
 
-    header("Location: principal.php");
+    header("Location: listar_postagem.php");
 ?>
