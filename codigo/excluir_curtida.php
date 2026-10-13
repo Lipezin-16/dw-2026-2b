@@ -8,5 +8,5 @@ $sql = "delete from curtida where idusuario = $idusuario and idpostagem = $idpos
 
 mysqli_query($conexao, $sql);
 
-header("Location: listar_curtida.php");
+header("Location: listar_postagem.php");
 ?>
