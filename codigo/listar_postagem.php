@@ -57,10 +57,10 @@
             echo "<br>";
 
             echo "<form action='salvar_curtida.php' method='post'>";
-            echo "<input type='submit' value='curtir'>" ; //botao de curtida
+            echo "<input type='hidden' name='idpostagem' value='$idpostagem'>";
+            echo "<input type='submit' value='Curtir'>";
             echo "</form>";
-            echo "<div>";
-
+            echo"</div>";
             
 
             $sql2 = "SELECT comentario.idcomentario, comentario.idusuario, comentario.texto, usuario.username, usuario.nome, usuario.foto
