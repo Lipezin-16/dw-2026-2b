@@ -62,12 +62,23 @@
 
             echo "<form action='salvar_curtida.php' method='post'>";
             echo "<input type='hidden' name='idpostagem' value='$idpostagem'>";
-            echo "<input type='image' src='imagen/descurtir.png' alt='curtir' id='curtir' Buttonclik(mudar())>";
+            echo "<input type='image' src='imagen/descurtir.png' alt='curtir' id='curtir' onclick = 'mudar()' >";
             echo "</form>";
             echo"</div>";
-            echo "<script>";
+            
+            echo "<script>
+            function mudar() {
+            var foto = document.getElementById('curtir');
 
-            echo "</script>";
+                if (foto.src.includes('descurtir.png')){
+                    foto.src = 'imagen/curtir.png';
+                }else{
+                    foto.src = 'imagen/descurtir.png';
+                    }
+            }
+            </script>";
+
+            
 
             
 
