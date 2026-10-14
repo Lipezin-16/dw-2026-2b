@@ -20,6 +20,10 @@
             padding: 10px;
             margin: 10px;
         }
+        #curtir{
+            height: auto;
+        width: 30px;        }
+
     </style>
 </head>
 
@@ -58,9 +62,13 @@
 
             echo "<form action='salvar_curtida.php' method='post'>";
             echo "<input type='hidden' name='idpostagem' value='$idpostagem'>";
-            echo "<input type='image' src='/descurtir.jpg' alt='Descurtir'>";
+            echo "<input type='image' src='imagen/descurtir.png' alt='curtir' id='curtir' Buttonclik(mudar())>";
             echo "</form>";
             echo"</div>";
+            echo "<script>";
+
+            echo "</script>";
+
             
 
             $sql2 = "SELECT comentario.idcomentario, comentario.idusuario, comentario.texto, usuario.username, usuario.nome, usuario.foto
