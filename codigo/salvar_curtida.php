@@ -10,9 +10,11 @@
 
     $resultado = mysqli_query($conexao, $sql);
 
+    require "contar_curtida.php";
+
     if (mysqli_num_rows($resultado) > 0) {
 
-        // Remove a curtida se já existir
+        // Remove a curtida se ja existir
         $sql = "DELETE FROM curtida WHERE idusuario = $idusuario AND idpostagem = $idpostagem";
 
     } else {
