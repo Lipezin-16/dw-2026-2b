@@ -10,7 +10,6 @@
 
     $resultado = mysqli_query($conexao, $sql);
 
-    require "contar_curtida.php";
 
     if (mysqli_num_rows($resultado) > 0) {
 
@@ -23,7 +22,10 @@
         $sql = "INSERT INTO curtida (idusuario, idpostagem) VALUES ($idusuario, $idpostagem)";
     }
 
+
     mysqli_query($conexao, $sql);
+    
+
 
     header("Location: listar_postagem.php");
     exit();

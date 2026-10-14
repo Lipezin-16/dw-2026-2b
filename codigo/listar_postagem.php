@@ -60,11 +60,19 @@
             echo $data_hora;
             echo "<br>";
 
+
+    $sql2 = "SELECT COUNT(*) AS total FROM curtida WHERE idpostagem = $idpostagem";
+    $resultado = mysqli_query($conexao, $sql2);
+    $curtidas = mysqli_fetch_assoc($resultado);
+
             echo "<form action='salvar_curtida.php' method='post'>";
             echo "<input type='hidden' name='idpostagem' value='$idpostagem'>";
             echo "<input type='image' src='imagen/descurtir.png' alt='curtir' id='curtir' onclick = 'mudar()' >";
+            echo $curtidas['total'];
+
             echo "</form>";
             echo"</div>";
+
             
             echo "<script>
             function mudar() {
